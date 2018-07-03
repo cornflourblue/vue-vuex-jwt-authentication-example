@@ -5,7 +5,7 @@
             Password: test
         </div>
         <h2>Login</h2>
-        <form @submit="handleSubmit">
+        <form @submit.prevent="handleSubmit">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" v-model="username" name="username" class="form-control" :class="{ 'is-invalid': submitted && !username }" />
@@ -40,8 +40,6 @@ export default {
     },
     methods: {
         handleSubmit (e) {
-            e.preventDefault();
-
             this.submitted = true;
             const { username, password } = this;
             const { dispatch } = this.$store;
