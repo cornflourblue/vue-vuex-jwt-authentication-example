@@ -11,7 +11,7 @@
             </li>
         </ul>
         <p>
-            <a href="/login">Logout</a>
+            <router-link to="/login">Logout</router-link>
         </p>
     </div>
 </template>
