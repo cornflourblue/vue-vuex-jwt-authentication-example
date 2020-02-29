@@ -11,8 +11,8 @@ export const alert = {
         error({ commit }, message) {
             commit('error', message);
         },
-        clear({ commit }, message) {
-            commit('success', message);
+        clear({ commit }) {
+            commit('clear');
         }
     },
     mutations: {
